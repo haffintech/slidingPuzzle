@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <title>Aufgabe03</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <script type="text/javascript" src="script.js"></script>
+
+
+  </head>
+
+  <body>
+
+    <main>
+
+      <div id="board" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <script>
+          for(i = 1; i < 25; i++) {
+            document.write("<div class='stone' draggable='true' ondragstart='drag(event)' onclick='move(this)' id='stone" + i + "'>" + i + "</div>");
+          }
+          saveDivsInArray();
+        </script>
+      </div>
+
+
+    <div id="controlBoard">
+
+      <div id="counter">
+        moves: 0
+      </div>
+      <div id="buttons">
+        <button onclick="shuffle(20)">
+          easy
+        </button>
+        <button onclick="shuffle(50)">
+          medium
+        </button>
+        <button onclick="shuffle(80)">
+          hard
+        </button>
+      </div>
+      
+      
+    </div>
+
+
+
+
+
+    </main>
+  </body>
+
+</html>
